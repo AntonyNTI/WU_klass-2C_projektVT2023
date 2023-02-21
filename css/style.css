@@ -4,35 +4,41 @@
     box-sizing: border-box;
     list-style: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 #gridwrapper_index {
     display: grid;
-    grid-template-columns: 180px 1fr;
-    grid-template-rows: 170px 50px 150px;
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: 120px 50px 500px 100px;
     grid-template-areas: 
     "lb lt"
     "na na"
+    "p1 p1"
     "fo fo"
     ;
 }
 
 #logo_bild {
     grid-area: lb;
-    height: 150px;
-    width: 150px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin-top: 10px;
 }
 
 #logo_text{
     grid-area: lt;
     display: flex;
     align-items: center;
-    font-size: 75px;
+    font-size: 50px;
 }
 
 nav{
     grid-area: na;
-    background-color: brown;
+    background: rgb(239, 238, 238);
 }
 
 #navigation_bar_list{
@@ -43,7 +49,12 @@ nav{
     height: 100%;
 }
 
-
+#pizza_bild1{
+    grid-area: p1;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
 
 footer{
     grid-area: fo;
@@ -51,7 +62,6 @@ footer{
 }
 
 #body_index{
-margin-right: 90px;
-margin-left: 90px;
-margin-top: 60px;
+margin-right: 160px;
+margin-left: 160px;
 }
