@@ -99,11 +99,17 @@ footer{
 #gridwrapper_meny_sida{
     display: grid;
     grid-template-columns: 130px 1fr;
-    grid-template-rows: 120px 50px 1fr;
+    grid-template-rows: 120px 50px 600px 2700px 1000px 1000px 1000px 1000px 1000px;
     grid-template-areas: 
     "lb lt"
     "na na"
     "gm gm"
+    "pp pp"
+    "aa aa"
+    "vv vv"
+    "ss ss"
+    "hh hh"
+    "kk kk"
     ;
 }
 
@@ -112,50 +118,141 @@ footer{
     justify-content: space-between;
     grid-area: gm;
     grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 300px 300px;
+    grid-template-rows: 250px 50px 250px 50px;
     grid-template-areas:
-    "pa ae vo"
-    "sd he kb"
+    "pi ai vi"
+    "pt at vt"
+    "si hi ki"
+    "st ht kt"
     ;
 }
 
-#pizza{
-    grid-area: pa;
-    background-color: brown;
-}
-
-#a_la_carne{
-    grid-area: ae;
-    background-color: aquamarine;
-}
-
-#kebab{
-    grid-area: kb;
-    background-color: green;
-}
-
-#veggo{
-    grid-area: vo;
-    background-color: blue;
-}
-
-#sallad{
-    grid-area: sd;
-    background-color: purple;
-}
-
-#hamburgare{
-    grid-area: he;
-    background-color: gray;
-}
+/* styling för iconer och text under */
 
 .meny_list{
     display: flex;
-    margin-top: 20px;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .mat_icon{
     height: 200px;
     width: 200px;
+}
+
+.mat_text{
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ratter_meny{
+    background-color: rgb(239, 238, 238);
+    margin-top: 30px;
+}
+
+.pizza_ratter{
+    margin-bottom: 10px;
+}
+
+.pizza_rubrik{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* grid_area för iconerna och texten under */
+
+#pizza_icon_list{
+    grid-area: pi;
+    background-color: brown;
+}
+
+#pizza_text_list{
+    grid-area: pt;
+    background-color: rgb(136, 36, 36);
+}
+
+#a_la_carte_icon_list{
+    grid-area: ai;
+    background-color: aquamarine;
+}
+
+#a_la_carte_text_list{
+    grid-area: at;
+    background-color: rgb(93, 186, 155);
+}
+
+#kebab_icon_list{
+    grid-area: ki;
+    background-color: green;
+}
+
+#kebab_text_list{
+    grid-area: kt;
+    background-color: rgb(1, 100, 1);
+}
+
+#veggo_icon_list{
+    grid-area: vi;
+    background-color: blue;
+}
+
+#veggo_text_list{
+    grid-area: vt;
+    background-color: rgb(0, 0, 195);
+}
+
+#veggo_icon{
+    height: 220px;
+    width: 220px;
+}
+
+#sallad_icon_list{
+    grid-area: si;
+    background-color: purple;
+}
+
+#sallad_text_list{
+    grid-area: st;
+    background-color: rgb(87, 1, 87);
+}
+
+#hamburgare_icon_list{
+    grid-area: hi;
+    background-color: gray;
+}
+
+#hamburgare_text_list{
+    grid-area: ht;
+    background-color: rgb(114, 114, 114);
+}
+
+/* grid_area för meny rätterna  */
+
+#pizza_ratter_meny{
+    grid-area: pp;
+}
+
+#a_la_carte_ratter_meny{
+    grid-area: aa;
+}
+
+#veggo_ratter_meny{
+    grid-area: vv;
+}
+
+#sallad_ratter_meny{
+    grid-area: ss;
+}
+
+#hamburgare_ratter_meny{
+    grid-area: hh;
+}
+
+#kebab_ratter_meny{
+    grid-area: kk;
 }
