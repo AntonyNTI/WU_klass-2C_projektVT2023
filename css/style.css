@@ -14,22 +14,10 @@ body{
     margin-left: 160px;
 }
 
-#gridwrapper_index{
-    display: grid;
-    grid-template-columns: 130px 1fr;
-    grid-template-rows: 120px 50px 500px 100px;
-    grid-template-areas: 
-    "lb lt"
-    "na na"
-    "p1 p1"
-    "fo fo"
-    ;
-}
+/* navigationbar */
 
 #logo_bild_wrapper{
     grid-area: lb;
-    display: flex;
-    align-items: center;
 }
 
 #logo_bild{
@@ -82,11 +70,40 @@ nav{
     color: black;
 }
 
+/* index */
+
+#gridwrapper_index_sida{
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: 120px 50px 1fr;
+    grid-template-areas:
+    "lb lt"
+    "na na"
+    "gi gi"
+    ;
+}
+
+#gridwrapper_index_innehal{
+    display: grid;
+    grid-area: gi;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 200px 100px;
+    grid-template-areas: 
+    "p1 p1"
+    "or or"
+    "fo fo"
+    ;
+}
+
 #pizza_bild1{
     grid-area: p1;
     width: 100%;
     height: auto;
     margin-top: 10px;
+}
+
+#om_oss_rubrik{
+    grid-area: or;
 }
 
 footer{
@@ -99,24 +116,20 @@ footer{
 #gridwrapper_meny_sida{
     display: grid;
     grid-template-columns: 130px 1fr;
-    grid-template-rows: 120px 50px 600px 2700px 1000px 1000px 1000px 1000px 1000px;
+    grid-template-rows: 120px 50px 600px 1fr;
     grid-template-areas: 
     "lb lt"
     "na na"
     "gm gm"
-    "pp pp"
-    "aa aa"
-    "vv vv"
-    "ss ss"
-    "hh hh"
-    "kk kk"
+    "gr gr"
     ;
 }
 
 #gridwrapper_meny{
+    grid-area: gm;
+    background-image: url(/img/cutting_board.jpg);
     display: grid;
     justify-content: space-between;
-    grid-area: gm;
     grid-template-columns: 300px 300px 300px;
     grid-template-rows: 250px 50px 250px 50px;
     grid-template-areas:
@@ -127,7 +140,23 @@ footer{
     ;
 }
 
-/* styling för iconer och text under */
+#gridwrapper_ratter{
+    grid-area: gr;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 480px 100px 100fr;
+    grid-template-rows: 660px 300px 305px 440px 490px 480px;
+    grid-template-areas:
+    "pp pvv pf"
+    "aa avv af"
+    "vv vvv vf"
+    "ss svv sf"
+    "hh hvv hf"
+    "kk kvv kf"
+    ;
+}
+
+/* styling för iconer*/
 
 .meny_list{
     display: flex;
@@ -148,62 +177,88 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
+
+/* styling för rätter */
 
 .ratter_meny{
     background-color: rgb(239, 238, 238);
     margin-top: 30px;
 }
 
-.pizza_ratter{
+.ratter{
     margin-bottom: 10px;
+    margin-left: 150px;
+    font-size: 15px;
 }
 
-.pizza_rubrik{
-    margin-top: 30px;
+.ratter_rubrik{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+}
+
+/* styling för pris */
+
+.pris_rubrik{
+    margin-top: 20px;
     margin-bottom: 30px;
 }
+
+.pris{
+    margin-top: 30px;
+    background-color: rgb(239, 238, 238);
+}
+
+.pris_text{
+    display: flex;
+    margin-bottom: 27px;
+    font-size: 15px;
+}
+
+
 
 /* grid_area för iconerna och texten under */
 
 #pizza_icon_list{
     grid-area: pi;
-    background-color: brown;
+
 }
 
 #pizza_text_list{
     grid-area: pt;
-    background-color: rgb(136, 36, 36);
+
 }
 
 #a_la_carte_icon_list{
     grid-area: ai;
-    background-color: aquamarine;
+
 }
 
 #a_la_carte_text_list{
     grid-area: at;
-    background-color: rgb(93, 186, 155);
+
 }
 
 #kebab_icon_list{
     grid-area: ki;
-    background-color: green;
+
 }
 
 #kebab_text_list{
     grid-area: kt;
-    background-color: rgb(1, 100, 1);
+
 }
 
 #veggo_icon_list{
     grid-area: vi;
-    background-color: blue;
+
 }
 
 #veggo_text_list{
     grid-area: vt;
-    background-color: rgb(0, 0, 195);
+
 }
 
 #veggo_icon{
@@ -213,22 +268,22 @@ footer{
 
 #sallad_icon_list{
     grid-area: si;
-    background-color: purple;
+
 }
 
 #sallad_text_list{
     grid-area: st;
-    background-color: rgb(87, 1, 87);
+
 }
 
 #hamburgare_icon_list{
     grid-area: hi;
-    background-color: gray;
+
 }
 
 #hamburgare_text_list{
     grid-area: ht;
-    background-color: rgb(114, 114, 114);
+
 }
 
 /* grid_area för meny rätterna  */
@@ -255,4 +310,56 @@ footer{
 
 #kebab_ratter_meny{
     grid-area: kk;
+}
+
+/* grid_area för vanlig pris */
+
+#pizza_vanlig_pris{
+    grid-area: pvv;
+}
+
+#a_la_carne_vanlig_pris{
+    grid-area: avv;
+}
+
+#veggo_vanlig_pris{
+    grid-area: vvv;
+}
+
+#sallad_vanlig_pris{
+    grid-area: svv;
+}
+
+#hamburgare_vanlig_pris{
+    grid-area: hvv;
+}
+
+#kebab_vanlig_pris{
+    grid-area: kvv;
+}
+
+/* grid_area för vanlig pris */
+
+#pizza_familj_pris{
+    grid-area: pf;
+}
+
+#a_la_carne_familj_pris{
+    grid-area: af;
+}
+
+#veggo_familj_pris{
+    grid-area: vf;
+}
+
+#sallad_familj_pris{
+    grid-area: sf;
+}
+
+#hamburgare_familj_pris{
+    grid-area: hf;
+}
+
+#kebab_familj_pris{
+    grid-area: kf;
 }
